@@ -12,6 +12,8 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
+using CustomChromeLibrary;
+using MyTabControl;
 
 namespace Ref_2.Views
 {
@@ -24,5 +26,6 @@ namespace Ref_2.Views
         {
             InitializeComponent();
         }
+
     }
 }

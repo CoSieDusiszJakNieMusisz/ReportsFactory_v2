@@ -64,7 +64,7 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="ViewModels\ActionViewModel.cs" />
-    <Compile Include="ViewModels\CorrectorViewModel.cs" />
+    <Compile Include="ViewModels\Apps\CorrectorViewModel.cs" />
     <Compile Include="ViewModels\RibbonViewModel.cs" />
     <Compile Include="Views\ActionView.xaml.cs">
       <DependentUpon>ActionView.xaml</DependentUpon>
