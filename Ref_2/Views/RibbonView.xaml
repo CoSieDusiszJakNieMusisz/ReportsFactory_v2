@@ -1,0 +1,103 @@
+﻿<UserControl x:Class="Ref_2.Views.RibbonView"
+             xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+             xmlns:local="clr-namespace:Ref_2.Views"
+             xmlns:Custom="http://schemas.microsoft.com/winfx/2006/xaml/presentation/ribbon"
+             mc:Ignorable="d" 
+             d:DesignHeight="450" d:DesignWidth="800">
+    <Custom:Ribbon Margin="2,-22,2,2">
+        <Custom:Ribbon.ApplicationMenu >
+            <Custom:RibbonApplicationMenu Label="Plik">
+                <Custom:RibbonApplicationMenu.SmallImageSource>
+                    <DrawingImage>
+                        <DrawingImage.Drawing>
+                            <GeometryDrawing>
+                                <GeometryDrawing.Geometry>
+                                    <RectangleGeometry Rect="0,0,20,20"></RectangleGeometry>
+                                </GeometryDrawing.Geometry>
+                                <GeometryDrawing.Brush>
+                                    <VisualBrush Stretch="Uniform">
+                                        <VisualBrush.Visual>
+                                            <TextBlock Text="Plik" FontSize="16" Foreground="White" />
+                                        </VisualBrush.Visual>
+                                    </VisualBrush>
+                                </GeometryDrawing.Brush>
+                            </GeometryDrawing>
+                        </DrawingImage.Drawing>
+                    </DrawingImage>
+                </Custom:RibbonApplicationMenu.SmallImageSource>
+                <Custom:RibbonApplicationMenuItem Header="Zamknij"/>
+            </Custom:RibbonApplicationMenu>
+
+        </Custom:Ribbon.ApplicationMenu >
+        <Custom:RibbonTab Header="Narzędzia">
+            <Custom:RibbonGroup Header="Papierówka">
+                <Custom:RibbonButton x:Name="korektor" Label="Korektor PZ" Width="60" LargeImageSource="../Content/img/raport.png"/>
+                <Custom:RibbonButton Label="Anuluj PZK" Width="60" LargeImageSource="../Content/img/raport.png"/>
+                <Custom:RibbonMenuButton Label="Spinacz" Width="60" LargeImageSource="../Content/img/raport.png">
+                    <Custom:RibbonMenuItem ImageSource="../Content/img/raport.png" Header="Spinaj dokumenty"/>
+                    <Custom:RibbonMenuItem ImageSource="../Content/img/raport.png" Header="Drukuj dokumenty"/>
+                </Custom:RibbonMenuButton>
+                <Custom:RibbonButton Label="ProBot" Width="60" LargeImageSource="../Content/img/raport.png"/>
+            </Custom:RibbonGroup>
+            <Custom:RibbonGroup Header="Dekompletacja">
+                <Custom:RibbonButton Label="Dekompletacja pojedyczego kodu" Width="120" LargeImageSource="../Content/img/raport.png"/>
+                <Custom:RibbonButton Label="Dekompletacja wielu kodów" Width="120" LargeImageSource="../Content/img/raport.png"/>
+            </Custom:RibbonGroup>
+            <Custom:RibbonGroup Header="Inne">
+                <Custom:RibbonButton Label="Zamiana TP na TZ" Width="80" LargeImageSource="../Content/img/raport.png"/>
+                <Custom:RibbonButton Label="MTX auto WMS" Width="80" LargeImageSource="../Content/img/raport.png"/>
+            </Custom:RibbonGroup>
+        </Custom:RibbonTab>
+
+        <Custom:RibbonTab Header="Raporty">
+            <Custom:RibbonGroup Header="Papierówka">
+                <Custom:RibbonButton Label="Możliwe korekty" Width="60" LargeImageSource="../Content/img/raport.png"/>
+                <Custom:RibbonMenuButton Label="Szczegóły" Width="65" LargeImageSource="../Content/img/raport.png">
+                    <Custom:RibbonMenuItem ImageSource="../Content/img/raport.png" Header="Szczegóły PZ"/>
+                    <Custom:RibbonMenuItem ImageSource="../Content/img/raport.png" Header="Szczegóły PZ - Ełk/Szczecinek"/>
+                </Custom:RibbonMenuButton>
+                <Custom:RibbonButton Label="PZ Skorygowane niespięte" Width="100" LargeImageSource="../Content/img/raport.png"/>
+                <Custom:RibbonMenuButton Label="Zasoby" Width="60" LargeImageSource="../Content/img/raport.png">
+                    <Custom:RibbonMenuItem ImageSource="../Content/img/raport.png" Header="Zasoby"/>
+                    <Custom:RibbonMenuItem ImageSource="../Content/img/raport.png" Header="Zasoby - non specific"/>
+                </Custom:RibbonMenuButton>
+                <Custom:RibbonButton Label="Korekty z zerem" Width="60" LargeImageSource="../Content/img/raport.png"/>
+                <Custom:RibbonButton Label="Różnica PZ-WM" Width="60" LargeImageSource="../Content/img/raport.png"/>
+                <Custom:RibbonButton VerticalAlignment="Center" Label="Szwalnia" Width="60" LargeImageSource="../Content/img/raport.png"/>
+                <Custom:RibbonButton Label="Braki WM" Width="60" LargeImageSource="../Content/img/raport.png"/>
+                <Custom:RibbonButton Label="WM rozliczone niewysłane" Width="100" LargeImageSource="../Content/img/raport.png"/>
+            </Custom:RibbonGroup>
+            <Custom:RibbonGroup Header="Dekompletacja">
+                <Custom:RibbonButton Label="Możliwe do dekompletacji" Width="80" LargeImageSource="../Content/img/raport.png"/>
+            </Custom:RibbonGroup>
+            <Custom:RibbonGroup Header="Wykresy">
+                <Custom:RibbonButton Label="P - Rok vs Rok" Width="60" LargeImageSource="../Content/img/raport.png"/>
+                <Custom:RibbonButton Label="Wyprawki - rezerwacje, sprzedaż" Width="120" LargeImageSource="../Content/img/raport.png"/>
+            </Custom:RibbonGroup>
+            <Custom:RibbonGroup Header="Inne">
+                <Custom:RibbonButton Label="Zalegacze" Width="60" LargeImageSource="../Content/img/raport.png"/>
+                <Custom:RibbonMenuButton Label="Obroty dostawców" Width="80" LargeImageSource="../Content/img/raport.png">
+                    <Custom:RibbonMenuItem ImageSource="../Content/img/raport.png" Header="Kraj/Import - PLN"/>
+                    <Custom:RibbonMenuItem ImageSource="../Content/img/raport.png" Header="Import - waluta"/>
+                </Custom:RibbonMenuButton>
+                <Custom:RibbonButton Label="Statystyki" Width="60" LargeImageSource="../Content/img/wykres.png"/>
+            </Custom:RibbonGroup>
+        </Custom:RibbonTab>
+
+        <Custom:RibbonTab Header="Ustawienia">
+            <Custom:RibbonGroup Header="Papierówka">
+                <Custom:RibbonButton Label="Zbanowani dostawcy do PZK" Width="100" LargeImageSource="../Content/img/raport.png"/>
+                <Custom:RibbonButton Label="Kody do P" Width="80" LargeImageSource="../Content/img/raport.png"/>
+            </Custom:RibbonGroup>
+            <Custom:RibbonGroup Header="Dekompletacja">
+                <Custom:RibbonButton Label="Zbanowane kody" Width="80" LargeImageSource="../Content/img/raport.png"/>
+            </Custom:RibbonGroup>
+            <Custom:RibbonGroup Header="Administrator">
+                <Custom:RibbonButton Label="Admin" Width="80" LargeImageSource="../Content/img/raport.png"/>
+            </Custom:RibbonGroup>
+        </Custom:RibbonTab>
+    </Custom:Ribbon>
+</UserControl>

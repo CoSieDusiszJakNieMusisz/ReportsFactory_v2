@@ -4,9 +4,113 @@
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:Ref_2"
+        xmlns:Infrastructure="clr-namespace:Ref_2.Infrastructure"
+        xmlns:shell="clr-namespace:Microsoft.Windows.Shell;assembly=Microsoft.Windows.Shell"
+        xmlns:Views="clr-namespace:Ref_2.Views"
+        xmlns:mtc="clr-namespace:MyTabControl;assembly=MyTabControl"
+        xmlns:ccl="clr-namespace:CustomChromeLibrary;assembly=CustomChromeLibrary"
         mc:Ignorable="d"
         Title="MainWindow" Height="450" Width="800">
-    <Grid>
-        
+    <Window.Resources>
+        <ResourceDictionary>
+            <ResourceDictionary.MergedDictionaries>
+                <ResourceDictionary Source="Resources\GlassButton.xaml"/>
+                <ResourceDictionary Source="Resources\FavIcon.xaml"/>
+            </ResourceDictionary.MergedDictionaries>
+            <Infrastructure:CaptionButtonRectToMarginConverter x:Key="CaptionButtonMarginConverter"/>
+        </ResourceDictionary>
+    </Window.Resources>
+
+    <shell:WindowChrome.WindowChrome>
+        <shell:WindowChrome 
+                            CaptionHeight="26"
+                            CornerRadius="25,25,10,10"
+                            GlassFrameThickness="0"/>
+    </shell:WindowChrome.WindowChrome>
+    <!--ResizeBorderThickness="6"-->
+    <Grid Background="#dfe9f5">
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="auto" />
+            <RowDefinition Height="117"/>
+            <RowDefinition Height="*"/>
+        </Grid.RowDefinitions>
+
+        <!--provide the background for the entire form.  In practice, this appears as the window's resize border, because the title and window content obscure the rest-->
+        <Border CornerRadius="10,10,5,5" Grid.RowSpan="2" BorderThickness="0" BorderBrush="LightSteelBlue">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Color="#dfe9f5" Offset="0" />
+                    <GradientStop Color="#dfe9f5" Offset="1" />
+                </LinearGradientBrush>
+            </Border.Background>
+        </Border>
+
+        <!--ribbon-->
+        <Grid Grid.Row="1">
+            <Views:RibbonView></Views:RibbonView>
+        </Grid>
+
+        <!--title bar-->
+        <Border CornerRadius="10,10,0,0" BorderThickness="0" BorderBrush="LightSteelBlue" Height="36" Margin="{Binding CaptionButtonMargin}">
+            <Border.Background>
+                <LinearGradientBrush StartPoint="0.5,0" EndPoint="0.5,1">
+                    <GradientStop Color="#f6f9fc" Offset="0" />
+                    <GradientStop Color="#dfe9f5" Offset="1" />
+                </LinearGradientBrush>
+            </Border.Background>
+
+            <!--Window Icon and Title-->
+            <StackPanel Orientation="Horizontal" Margin="0" VerticalAlignment="Top" Grid.Row="0">
+                <ccl:WindowIcon Width="20" Height="20" Background="#ff0000bb" Margin="7,3,5,5" Style="{StaticResource FavIcon}" />
+                <TextBlock Text="Reports Factory v 2.0" FontFamily="Calibri" FontSize="16" VerticalAlignment="Center"/>
+            </StackPanel>
+
+        </Border>
+        <ccl:CaptionButtons/>
+
+        <Grid Grid.Row="2">
+
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="300"/>
+                <ColumnDefinition Width="*"/>
+            </Grid.ColumnDefinitions>
+
+
+            <Grid Grid.Column="0" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="10"/>
+                </Grid.RowDefinitions>
+                <Grid Grid.Column="1" Grid.Row="1">
+                    <Views:ActionView></Views:ActionView>
+                </Grid>
+            </Grid>
+            <Grid Grid.Column="1" >
+                <Grid.ColumnDefinitions>
+                    <ColumnDefinition Width="10"/>
+                    <ColumnDefinition Width="*"/>
+                    <ColumnDefinition Width="10"/>
+                </Grid.ColumnDefinitions>
+                <Grid.RowDefinitions>
+                    <RowDefinition Height="5"/>
+                    <RowDefinition Height="*"/>
+                    <RowDefinition Height="10"/>
+                </Grid.RowDefinitions>
+
+                <Grid  Grid.Column="1" Grid.Row="1">
+                    <mtc:UserControl1 x:Name="TabControl1"/>
+                </Grid>
+            </Grid>
+        </Grid>
+
     </Grid>
+
 </Window>
