@@ -7,15 +7,17 @@
         xmlns:Infrastructure="clr-namespace:Ref_2.Infrastructure"
         xmlns:shell="clr-namespace:Microsoft.Windows.Shell;assembly=Microsoft.Windows.Shell"
         xmlns:Views="clr-namespace:Ref_2.Views"
+        xmlns:Apps="clr-namespace:Ref_2.Views.Apps"
         xmlns:mtc="clr-namespace:MyTabControl;assembly=MyTabControl"
         xmlns:ccl="clr-namespace:CustomChromeLibrary;assembly=CustomChromeLibrary"
         mc:Ignorable="d"
-        Title="MainWindow" Height="450" Width="800">
+        Title="MainWindow" Height="708" Width="1000">
     <Window.Resources>
         <ResourceDictionary>
             <ResourceDictionary.MergedDictionaries>
                 <ResourceDictionary Source="Resources\GlassButton.xaml"/>
                 <ResourceDictionary Source="Resources\FavIcon.xaml"/>
+                <ResourceDictionary Source="Resources\TabControlStyle.xaml"/>
             </ResourceDictionary.MergedDictionaries>
             <Infrastructure:CaptionButtonRectToMarginConverter x:Key="CaptionButtonMarginConverter"/>
         </ResourceDictionary>
@@ -36,6 +38,7 @@
             <RowDefinition Height="auto" />
             <RowDefinition Height="117"/>
             <RowDefinition Height="*"/>
+            <!--<RowDefinition Height="*"/>-->
         </Grid.RowDefinitions>
 
         <!--provide the background for the entire form.  In practice, this appears as the window's resize border, because the title and window content obscure the rest-->
@@ -78,7 +81,6 @@
                 <ColumnDefinition Width="*"/>
             </Grid.ColumnDefinitions>
 
-
             <Grid Grid.Column="0" >
                 <Grid.ColumnDefinitions>
                     <ColumnDefinition Width="10"/>
@@ -106,11 +108,19 @@
                 </Grid.RowDefinitions>
 
                 <Grid  Grid.Column="1" Grid.Row="1">
-                    <mtc:UserControl1 x:Name="TabControl1"/>
+                    <!--<mtc:UserControl1 x:Name="TabControl1" MouseDoubleClick="TabControl1_MouseDoubleClick">
+
+                    </mtc:UserControl1>-->
+                    <TabControl Style="{StaticResource MyTabControl}">
+                        
+                        <TabItem Header="Korektor PZ" Style="{StaticResource MyTabItem}">
+                            <Apps:CorrectorView></Apps:CorrectorView>
+                        </TabItem>
+                        
+                    </TabControl>
                 </Grid>
             </Grid>
         </Grid>
-
     </Grid>
 
 </Window>

@@ -13,14 +13,14 @@ using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
 
-namespace Ref_2.Views
+namespace Ref_2.Views.Apps.Corrector
 {
     /// <summary>
-    /// Interaction logic for CorrectorView.xaml
+    /// Interaction logic for CorrectorActionView.xaml
     /// </summary>
-    public partial class CorrectorView : UserControl
+    public partial class CorrectorActionView : UserControl
     {
-        public CorrectorView()
+        public CorrectorActionView()
         {
             InitializeComponent();
         }

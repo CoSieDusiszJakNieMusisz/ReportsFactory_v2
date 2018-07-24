@@ -1,4 +1,5 @@
-﻿using System;
+﻿using MyTabControl;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -23,6 +24,13 @@ namespace Ref_2
         public MainWindow()
         {
             InitializeComponent();
+        }
+
+        private void TabControl1_MouseDoubleClick(object sender, MouseButtonEventArgs e)
+        {
+            //ClosableTab closableTab = new ClosableTab();
+            //closableTab.Title = "Korektor PZ";
+            //TabControl1.AddTab(closableTab);
         }
     }
 }

@@ -63,13 +63,18 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Interfaces\IReport.cs" />
+    <Compile Include="Interfaces\ITool.cs" />
     <Compile Include="ViewModels\ActionViewModel.cs" />
     <Compile Include="ViewModels\Apps\CorrectorViewModel.cs" />
     <Compile Include="ViewModels\RibbonViewModel.cs" />
     <Compile Include="Views\ActionView.xaml.cs">
       <DependentUpon>ActionView.xaml</DependentUpon>
     </Compile>
-    <Compile Include="Views\Apps\CorrectorView.xaml.cs">
+    <Compile Include="Views\Apps\Corrector\CorrectorActionView.xaml.cs">
+      <DependentUpon>CorrectorActionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Apps\Corrector\CorrectorView.xaml.cs">
       <DependentUpon>CorrectorView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\RibbonView.xaml.cs">
@@ -104,7 +109,11 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
-    <Page Include="Views\Apps\CorrectorView.xaml">
+    <Page Include="Views\Apps\Corrector\CorrectorActionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Apps\Corrector\CorrectorView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -141,11 +150,22 @@
   </ItemGroup>
   <ItemGroup>
     <Folder Include="Models\" />
+    <Folder Include="Resources\Apps\" />
   </ItemGroup>
   <ItemGroup>
     <Resource Include="Content\img\raport.png" />
     <Resource Include="Content\img\ref2.ico" />
     <Resource Include="Content\img\wykres.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Content\img\refresh.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Content\img\refresh_20x20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Content\img\play_20x20.png" />
+    <Resource Include="Content\img\save_20x20.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

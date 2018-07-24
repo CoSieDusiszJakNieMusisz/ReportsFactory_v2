@@ -34,7 +34,7 @@
         </Custom:Ribbon.ApplicationMenu >
         <Custom:RibbonTab Header="Narzędzia">
             <Custom:RibbonGroup Header="Papierówka">
-                <Custom:RibbonButton x:Name="korektor" Label="Korektor PZ" Width="60" LargeImageSource="../Content/img/raport.png"/>
+                <Custom:RibbonButton x:Name="korektor" Click="korektor_Click" Label="Korektor PZ" Width="60" LargeImageSource="../Content/img/raport.png"/>
                 <Custom:RibbonButton Label="Anuluj PZK" Width="60" LargeImageSource="../Content/img/raport.png"/>
                 <Custom:RibbonMenuButton Label="Spinacz" Width="60" LargeImageSource="../Content/img/raport.png">
                     <Custom:RibbonMenuItem ImageSource="../Content/img/raport.png" Header="Spinaj dokumenty"/>

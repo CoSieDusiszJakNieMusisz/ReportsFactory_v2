@@ -12,24 +12,17 @@ using System.Windows.Media;
 using System.Windows.Media.Imaging;
 using System.Windows.Navigation;
 using System.Windows.Shapes;
-using CustomChromeLibrary;
-using MyTabControl;
 
-namespace Ref_2.Views
+namespace Ref_2.Views.Apps
 {
     /// <summary>
-    /// Interaction logic for RibbonView.xaml
+    /// Interaction logic for CorrectorView.xaml
     /// </summary>
-    public partial class RibbonView : UserControl
+    public partial class CorrectorView : UserControl
     {
-        public RibbonView()
+        public CorrectorView()
         {
             InitializeComponent();
-        }
-
-        private void korektor_Click(object sender, RoutedEventArgs e)
-        {
-            
         }
     }
 }

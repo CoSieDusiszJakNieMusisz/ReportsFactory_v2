@@ -4,10 +4,10 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace Ref_2.ViewModels
+namespace Ref_2.Interfaces
 {
-    class CorrectorViewModel 
+    public interface ITool
     {
-
+        void Run();
     }
 }
