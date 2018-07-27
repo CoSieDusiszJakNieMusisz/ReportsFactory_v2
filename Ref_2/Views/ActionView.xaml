@@ -6,7 +6,9 @@
              xmlns:local="clr-namespace:Ref_2"
              xmlns:Corrector="clr-namespace:Ref_2.Views.Apps.Corrector"
              xmlns:shell="clr-namespace:Microsoft.Windows.Shell;assembly=Microsoft.Windows.Shell"
-             
+             xmlns:CancelCorrections="clr-namespace:Ref_2.Views.Apps.CancelCorrections"
+             xmlns:ClipDocument="clr-namespace:Ref_2.Views.Apps.ClipsDocuments"
+             xmlns:Printer="clr-namespace:Ref_2.Views.Apps.Printer"
              mc:Ignorable="d" 
              d:DesignHeight="450" Width="287.651" x:Name="ActionWindow">
 
@@ -48,7 +50,10 @@
 
         </Border>
         <Grid x:Name="GridContent" Grid.Row="1" Margin="20,10,10,10">
-            <Corrector:CorrectorActionView></Corrector:CorrectorActionView>
+            <!--<Corrector:CorrectorActionView></Corrector:CorrectorActionView>-->
+            <!--<CancelCorrections:CancelCorrectionsActionView></CancelCorrections:CancelCorrectionsActionView>-->
+            <!--<ClipDocument:ClipDocumentsActionView></ClipDocument:ClipDocumentsActionView>-->
+            <Printer:PrinterActionView></Printer:PrinterActionView>
         </Grid>
     </Grid>
 

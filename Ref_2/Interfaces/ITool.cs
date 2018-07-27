@@ -9,5 +9,7 @@ namespace Ref_2.Interfaces
     public interface ITool
     {
         void Run();
+        void Refresh();
+        void SaveLog();
     }
 }

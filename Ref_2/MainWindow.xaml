@@ -7,9 +7,13 @@
         xmlns:Infrastructure="clr-namespace:Ref_2.Infrastructure"
         xmlns:shell="clr-namespace:Microsoft.Windows.Shell;assembly=Microsoft.Windows.Shell"
         xmlns:Views="clr-namespace:Ref_2.Views"
-        xmlns:Apps="clr-namespace:Ref_2.Views.Apps"
+
         xmlns:mtc="clr-namespace:MyTabControl;assembly=MyTabControl"
         xmlns:ccl="clr-namespace:CustomChromeLibrary;assembly=CustomChromeLibrary"
+        xmlns:Corrector="clr-namespace:Ref_2.Views.Apps.Corrector"
+        xmlns:CancelCorrector="clr-namespace:Ref_2.Views.Apps.CancelCorrections"
+        xmlns:ClipDocument="clr-namespace:Ref_2.Views.Apps.ClipsDocuments"
+        xmlns:Printer="clr-namespace:Ref_2.Views.Apps.Printer"
         mc:Ignorable="d"
         Title="MainWindow" Height="708" Width="1000">
     <Window.Resources>
@@ -114,9 +118,21 @@
                     <TabControl Style="{StaticResource MyTabControl}">
                         
                         <TabItem Header="Korektor PZ" Style="{StaticResource MyTabItem}">
-                            <Apps:CorrectorView></Apps:CorrectorView>
+                            <Corrector:CorrectorView></Corrector:CorrectorView>
                         </TabItem>
                         
+                        <TabItem Header="Anuluj PZK" Style="{StaticResource MyTabItem}">
+                            <CancelCorrector:CancelCorrectionsView></CancelCorrector:CancelCorrectionsView>
+                        </TabItem>
+
+                        <TabItem Header="Spinaj dokumenty" Style="{StaticResource MyTabItem}">
+                            <ClipDocument:ClipsDocumentsView></ClipDocument:ClipsDocumentsView>
+                        </TabItem>
+
+                        <TabItem Header="Drukuj dokumenty" Style="{StaticResource MyTabItem}">
+                            <Printer:PrinterView></Printer:PrinterView>
+                        </TabItem>
+
                     </TabControl>
                 </Grid>
             </Grid>

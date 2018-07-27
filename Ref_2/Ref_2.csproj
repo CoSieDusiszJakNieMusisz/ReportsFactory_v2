@@ -71,11 +71,29 @@
     <Compile Include="Views\ActionView.xaml.cs">
       <DependentUpon>ActionView.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\Apps\CancelCorrections\CancelCorrectionsActionView.xaml.cs">
+      <DependentUpon>CancelCorrectionsActionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Apps\CancelCorrections\CancelCorrectionsView.xaml.cs">
+      <DependentUpon>CancelCorrectionsView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Apps\ClipsDocuments\ClipDocumentsActionView.xaml.cs">
+      <DependentUpon>ClipDocumentsActionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Apps\ClipsDocuments\ClipsDocumentsView.xaml.cs">
+      <DependentUpon>ClipsDocumentsView.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\Apps\Corrector\CorrectorActionView.xaml.cs">
       <DependentUpon>CorrectorActionView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\Apps\Corrector\CorrectorView.xaml.cs">
       <DependentUpon>CorrectorView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Apps\Printer\PrinterActionView.xaml.cs">
+      <DependentUpon>PrinterActionView.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\Apps\Printer\PrinterView.xaml.cs">
+      <DependentUpon>PrinterView.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\RibbonView.xaml.cs">
       <DependentUpon>RibbonView.xaml</DependentUpon>
@@ -109,11 +127,35 @@
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
+    <Page Include="Views\Apps\CancelCorrections\CancelCorrectionsActionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Apps\CancelCorrections\CancelCorrectionsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Apps\ClipsDocuments\ClipDocumentsActionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Apps\ClipsDocuments\ClipsDocumentsView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\Apps\Corrector\CorrectorActionView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\Apps\Corrector\CorrectorView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Apps\Printer\PrinterActionView.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\Apps\Printer\PrinterView.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -166,6 +208,12 @@
   <ItemGroup>
     <Resource Include="Content\img\play_20x20.png" />
     <Resource Include="Content\img\save_20x20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Content\img\faktura_20x20.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Resource Include="Content\img\check_20x20.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>

@@ -26,7 +26,6 @@
         <Image Height="15" Width="15" Grid.Row="2" Grid.Column="0" Source="../../../Content/img/save_20x20.png" Cursor="Hand" />
 
         <Label Grid.Row="0" Grid.Column="1">
-
             <TextBlock Text="Uruchom" TextDecorations="Underline" Cursor="Hand"/>
         </Label>
         <Label Grid.Row="1" Grid.Column="1">
